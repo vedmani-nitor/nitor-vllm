@@ -36,4 +36,4 @@ def predict(message, history):
             yield partial_message
 
 
-gr.ChatInterface(predict).queue(default_concurrency_limit=5).launch(share=True)
+gr.ChatInterface(predict).queue(default_concurrency_limit=5).launch()
