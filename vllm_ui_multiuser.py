@@ -29,7 +29,7 @@ model_name = "microsoft/Phi-3-mini-4k-instruct"
 
 api_key = "token-abc123"
 print("Launching the server")
-command = f"python -m vllm.entrypoints.openai.api_server --model {model_name} --dtype {dtype} --trust-remote-code"
+command = f"python -m vllm.entrypoints.openai.api_server --model {model_name} --dtype {dtype} --trust-remote-code --port 8080"
 
 # Use shell=True only if the command is simple and doesn't contain special characters
 # process = subprocess.Popen(
