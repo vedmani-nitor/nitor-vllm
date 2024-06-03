@@ -2,7 +2,6 @@ import os
 import subprocess
 import time
 
-import gradio as gr
 from openai import OpenAI
 
 import argparse
