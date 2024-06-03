@@ -2,9 +2,6 @@ import os
 import subprocess
 import time
 
-os.system("pip install vllm -Uqq")
-os.system("pip install gradio -Uqq")
-
 import gradio as gr
 from openai import OpenAI
 
@@ -27,9 +24,8 @@ dtype = args.dtype
 
 model_name = "microsoft/Phi-3-mini-4k-instruct"
 
-api_key = "token-abc123"
 print("Launching the server")
-command = f"python -m vllm.entrypoints.openai.api_server --model {model_name} --dtype {dtype} --trust-remote-code --port 8080"
+command = f"python -m vllm.entrypoints.openai.api_server --model {model_name} --dtype {dtype} --trust-remote-code --port 8080 --api-key {api_key}"
 
 # Use shell=True only if the command is simple and doesn't contain special characters
 # process = subprocess.Popen(
